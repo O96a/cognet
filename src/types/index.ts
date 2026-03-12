@@ -50,7 +50,7 @@ export type PageType = 'architect' | 'multi-agent' | 'template';
  * Page metadata
  */
 export interface PageMetadata {
-  templateType?: 'report' | 'wiki' | 'presentation' | 'timeline' | 'mindmap' | 'website';
+  templateType?: 'report' | 'wiki' | 'presentation' | 'timeline' | 'mindmap' | 'website' | 'literature' | 'linkedin-content' | 'carousel';
   agents?: string[];
   generationTime?: number;
   [key: string]: unknown;

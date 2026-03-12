@@ -27,7 +27,10 @@ import { claudeService } from '../../../services/claude/ClaudeService';
 export class ContextSummarizationService {
   private readonly CLUSTER_SIZE = 3; // Summary every 3 stages
   private readonly MAX_TOKEN_ESTIMATE = 8000; // Target token budget
-  private readonly MODEL = 'claude-sonnet-4-5-20250929'; // Use Sonnet for summarization
+  /** Resolved lazily so it reflects runtime Ollama configuration. */
+  private getModel(): string {
+    return claudeService.getDefaultModel();
+  }
 
   /**
    * Build or update the hierarchical context summary
@@ -206,7 +209,7 @@ Be concise and specific.`;
 
     try {
       const response = await claudeService.execute({
-        model: this.MODEL,
+        model: this.getModel(),
         prompt,
         maxTokens: 300,
         extendedThinking: false,
@@ -274,7 +277,7 @@ Be concise but comprehensive. This summary will be used as context for future st
 
     try {
       const response = await claudeService.execute({
-        model: this.MODEL,
+        model: this.getModel(),
         prompt,
         maxTokens: 500,
         extendedThinking: false,
@@ -321,7 +324,7 @@ Be concise and actionable.`;
 
     try {
       const response = await claudeService.execute({
-        model: this.MODEL,
+        model: this.getModel(),
         prompt,
         maxTokens: 200,
         extendedThinking: false,
@@ -370,7 +373,7 @@ Be concise and specific.`;
 
     try {
       const response = await claudeService.execute({
-        model: this.MODEL,
+        model: this.getModel(),
         prompt,
         maxTokens: 200,
         extendedThinking: false,

@@ -21,7 +21,7 @@ export function setupSecurityPolicies(sessionInstance: typeof session): void {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: https:",
     "font-src 'self' data: https://fonts.gstatic.com",
-    "connect-src 'self' https://api.anthropic.com",
+    "connect-src 'self' http://localhost:* http://127.0.0.1:*",
     "frame-src 'none'",
     "object-src 'none'",
     "base-uri 'self'",
@@ -59,7 +59,6 @@ export function setupSecurityPolicies(sessionInstance: typeof session): void {
     const allowedDomains = [
       'localhost',
       '127.0.0.1',
-      'api.anthropic.com',
     ];
 
     const url = new URL(details.url);

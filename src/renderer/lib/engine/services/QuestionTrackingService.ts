@@ -15,6 +15,7 @@
 import type {
   TrackedQuestion,
   QuestionStatus,
+  QuestionCategory,
   ImportanceLevel,
   ConfidenceLevel,
   StageType,
@@ -378,7 +379,7 @@ export class QuestionTrackingService {
   /**
    * Categorize question type
    */
-  private categorizeQuestion(question: string): string {
+  private categorizeQuestion(question: string): QuestionCategory {
     const lowerQuestion = question.toLowerCase();
 
     if (lowerQuestion.startsWith('why')) {

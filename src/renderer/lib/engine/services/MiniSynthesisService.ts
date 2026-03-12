@@ -14,6 +14,7 @@
 import type { Stage, StageType } from '../../../types';
 import type { RichInsight, MiniSynthesis } from '../types/optimization-types';
 import { claudeService } from '../../../services/claude/ClaudeService';
+import { DEFAULT_OLLAMA_MODEL } from '../../../services/claude/ClaudeService';
 
 /**
  * Detailed synthesis report with metadata
@@ -37,13 +38,13 @@ export interface SynthesisReport extends MiniSynthesis {
 export interface SynthesisConfig {
   thinkingBudget: number;             // Extended thinking budget (default: 3000)
   maxOutputTokens: number;            // Maximum output tokens (default: 2000)
-  model: 'claude-sonnet-4-5-20250929' | 'claude-opus-4-20250514';
+  model: string;
 }
 
 const DEFAULT_SYNTHESIS_CONFIG: SynthesisConfig = {
   thinkingBudget: 3000,
   maxOutputTokens: 2000,
-  model: 'claude-sonnet-4-5-20250929',
+  model: DEFAULT_OLLAMA_MODEL,
 };
 
 /**
@@ -82,7 +83,7 @@ export class MiniSynthesisService {
     const prompt = this.buildSynthesisPrompt(lastStages, allInsights);
 
     try {
-      // Execute with Claude using Extended Thinking
+      // Execute with configured Ollama model
       const response = await claudeService.execute({
         model: this.config.model,
         prompt,

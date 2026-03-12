@@ -185,7 +185,7 @@ export class ChunkedPageGenerator {
         html,
         metadata: {
           generatedBy: 'claude',
-          model: 'claude-sonnet-4-5-20250929',
+          model: claudeService.getDefaultModel(),
           generationTime,
           templateType
         }
@@ -233,7 +233,7 @@ Return ONLY the HTML for this section (not full page), properly formatted and st
     const response = await executeWithBackoff(
       () => claudeService.execute({
         prompt,
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         extendedThinking: true,
         thinkingBudget: 2000,
         maxTokens: 4000,
@@ -294,7 +294,7 @@ Return ONLY the HTML for this section, properly formatted and styled.`;
     const response = await executeWithBackoff(
       () => claudeService.execute({
         prompt,
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         extendedThinking: true,
         thinkingBudget: 2000,
         maxTokens: 4000,
@@ -365,7 +365,7 @@ Return ONLY the HTML for this stage chunk, properly formatted and styled.`;
     const response = await executeWithBackoff(
       () => claudeService.execute({
         prompt,
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         extendedThinking: true,
         thinkingBudget: 3000,
         maxTokens: 8000,
@@ -414,7 +414,7 @@ Return ONLY the HTML for this section, properly formatted and styled.`;
     const response = await executeWithBackoff(
       () => claudeService.execute({
         prompt,
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         extendedThinking: true,
         thinkingBudget: 2000,
         maxTokens: 4000,

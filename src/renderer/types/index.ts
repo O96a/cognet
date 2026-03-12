@@ -37,6 +37,24 @@ export interface Stage {
   thinking?: string;
   artifacts: Artifact[];
   createdAt: number;
+  qualityScore?: number;
+  qualityReport?: {
+    overallScore: number;
+    scores: {
+      completeness: number;
+      depth: number;
+      specificity: number;
+      actionability: number;
+      coherence: number;
+      novelty: number;
+      [key: string]: number;
+    };
+    strengths: string[];
+    weaknesses: string[];
+    improvements: string[];
+    shouldRevise: boolean;
+    evaluatedAt: number;
+  };
 }
 
 export interface Artifact {
@@ -60,12 +78,17 @@ export interface Page {
   content: string;
   metadata?: PageMetadata;
   createdAt: number;
+  filePath?: string;
+  fileSize?: number;
+  analysisData?: string;
+  analysisTimestamp?: number;
+  version?: number;
 }
 
 export type PageType = 'architect' | 'multi-agent' | 'template';
 
 export interface PageMetadata {
-  templateType?: 'report' | 'wiki' | 'presentation' | 'timeline' | 'mindmap' | 'literature' | 'linkedin-content';
+  templateType?: 'report' | 'wiki' | 'presentation' | 'timeline' | 'mindmap' | 'literature' | 'linkedin-content' | 'website' | 'carousel';
   agents?: string[];
   generationTime?: number;
   [key: string]: unknown;
@@ -128,6 +151,7 @@ export interface IPCChannels {
   'journey:stop': (id: string) => Promise<void>;
 
   // Stage operations
+  'stage:create': (stage: Stage) => Promise<void>;
   'stage:get': (id: string) => Promise<Stage | null>;
   'stage:list': (journeyId: string) => Promise<Stage[]>;
 
@@ -136,6 +160,10 @@ export interface IPCChannels {
   'page:get': (id: string) => Promise<Page | null>;
   'page:list': (journeyId: string) => Promise<Page[]>;
   'page:delete': (id: string) => Promise<void>;
+  'page:save-file': (journeyId: string, pageId: string, content: string, templateType: string) => Promise<{ filePath: string; fileSize: number }>;
+  'page:read-file': (journeyId: string, pageId: string) => Promise<{ content: string }>;
+  'page:save-analysis': (journeyId: string, analysis: unknown) => Promise<{ success: boolean }>;
+  'page:read-analysis': (journeyId: string) => Promise<{ analysis: unknown } | null>;
 
   // Settings
   'settings:get': () => Promise<JourneySettings>;
@@ -148,6 +176,11 @@ export interface IPCChannels {
   // File operations
   'file:save': (path: string, content: string) => Promise<void>;
   'file:open': (path: string) => Promise<string>;
+
+  // Page storage/export
+  'page:storage-stats': () => Promise<{ totalPages: number; totalSize: number }>;
+  'page:export-pdf': (journeyId: string, pageId: string) => Promise<{ success: boolean; filePath?: string; canceled?: boolean }>;
+  'page:export-html': (journeyId: string, pageId: string) => Promise<{ success: boolean; filePath?: string; canceled?: boolean }>;
 }
 
 // Store types

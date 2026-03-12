@@ -60,11 +60,11 @@ export class ClaudePageGenerator {
     try {
       response = await claudeService.execute({
         prompt,
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         extendedThinking: true,
-        thinkingBudget: 12000, // Increased budget for strategic visualization planning + code generation
-        maxTokens: 64000, // Large limit for complete 8-stage journey websites (Claude 4.5 supports up to 128k)
-        stream: true, // REQUIRED: Enables long-running requests (>10 min)
+        thinkingBudget: 12000,
+        maxTokens: 64000,
+        stream: true,
       });
     } catch (error) {
       console.error('❌ Claude API request failed:');
@@ -128,7 +128,7 @@ export class ClaudePageGenerator {
       html,
       metadata: {
         generatedBy: 'claude',
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         tokensUsed: response.usage?.outputTokens,
         generationTime,
         templateType,

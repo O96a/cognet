@@ -219,6 +219,7 @@ export interface QualityReport {
 }
 
 export interface QualityScores {
+  [key: string]: number;
   completeness: number;                // 0-10: Addressed all elements
   depth: number;                       // 0-10: Thoroughness
   specificity: number;                 // 0-10: Concrete vs vague

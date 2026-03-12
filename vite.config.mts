@@ -30,8 +30,21 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port: 5173,
+    host: '0.0.0.0',
+    port: 6080,
     strictPort: true,
+    allowedHosts: true,
+    hmr: {
+      clientPort: 443,
+      protocol: 'wss',
+    },
+    proxy: {
+      '/ollama-api': {
+        target: 'http://127.0.0.1:11434',
+        changeOrigin: true,
+        rewrite: (p: string) => p.replace(/^\/ollama-api/, ''),
+      },
+    },
   },
   base: './',
 });

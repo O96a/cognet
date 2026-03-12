@@ -18,7 +18,7 @@ import type {
   SectionVariation,
   ContentType,
 } from '../types/design-language';
-import type { JourneyAnalysis } from '../types/journey';
+import type { JourneyAnalysis } from '../services/claude/ClaudePageAnalyzer';
 import { seededRandom, randomChoice, randomSample, randomInt, generateSeed } from './seeded-random';
 import { DESIGN_STYLES, TYPOGRAPHY_PAIRINGS, getCompatibleTypography, getStyleDescription, getLayoutSystemInstructions } from './design-style-library';
 
@@ -47,7 +47,7 @@ const TECHNICAL_CONSTRAINTS = [
 function classifyContent(analysis: JourneyAnalysis): ContentType {
   // Use narrative arc beginning and key themes for classification
   const question = (analysis.narrativeArc?.beginning || '').toLowerCase();
-  const themes = (analysis.keyThemes || []).map(t => t.toLowerCase()).join(' ');
+  const themes = (analysis.keyThemes || []).map((t: string) => t.toLowerCase()).join(' ');
   const combined = `${question} ${themes}`;
 
   // Temporal keywords
@@ -81,7 +81,7 @@ function getStylesForContentType(contentType: ContentType): DesignStyle[] {
   const stylesByContentType: Record<ContentType, DesignStyle[]> = {
     research: ['Glassmorphism', 'Minimal Monochrome', 'Organic Modernism', 'Dark Mode First', 'Futuristic Cyber'],
     process: ['Neubrutalism', '3D Elements & Depth', 'Maximalist Typography', 'Gradient Explosion', 'Futuristic Cyber'],
-    comparison: ['Split Screen Duotone', 'Neubrutalism', 'Minimal Monochrome', 'Dark Mode First'],
+    comparison: ['Neubrutalism', 'Minimal Monochrome', 'Dark Mode First', 'Glassmorphism'],
     temporal: ['Gradient Explosion', 'Retro Vaporwave', '3D Elements & Depth', 'Organic Modernism'],
     conceptual: ['Kinetic Typography', 'Maximalist Typography', 'Glassmorphism', 'Organic Modernism', 'Futuristic Cyber'],
   };
@@ -375,7 +375,7 @@ export function generateDesignLanguage(
     ? randomChoice(random, compatiblePairings)
     : randomChoice(random, TYPOGRAPHY_PAIRINGS);
 
-  const scale = random() > 0.6 ? 'spacious' : random() > 0.3 ? 'standard' : 'compact';
+  const scale: 'compact' | 'standard' | 'spacious' = random() > 0.6 ? 'spacious' : random() > 0.3 ? 'standard' : 'compact';
 
   // Generate type hierarchy based on scale
   const baseSize = scale === 'spacious' ? 1.25 : scale === 'compact' ? 0.875 : 1;

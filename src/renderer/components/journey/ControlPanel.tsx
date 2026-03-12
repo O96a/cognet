@@ -41,7 +41,7 @@ export function ControlPanel({
 
   // Fetch generated pages for this journey
   React.useEffect(() => {
-    if (!journey || !ipcClient.isAvailable()) return;
+    if (!journey) return;
 
     const fetchPages = async () => {
       try {
@@ -116,10 +116,6 @@ export function ControlPanel({
 
   const handleDeletePage = React.useCallback(async (page: Page, e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent opening the page
-
-    if (!ipcClient.isAvailable()) {
-      return;
-    }
 
     const confirmed = confirm(`Are you sure you want to delete "${page.title}"?\n\nThis action cannot be undone.`);
     if (!confirmed) return;

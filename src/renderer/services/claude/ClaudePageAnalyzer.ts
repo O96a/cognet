@@ -123,7 +123,7 @@ export class ClaudePageAnalyzer {
     // Execute with Extended Thinking for deep analysis
     const response = await claudeService.execute({
       prompt,
-      model: 'claude-sonnet-4-5-20250929', // Balanced for analysis
+      model: claudeService.getDefaultModel(),
       extendedThinking: true,
       thinkingBudget: 10000, // Budget for thorough analysis
       maxTokens: 16000, // Must be greater than thinkingBudget
@@ -138,7 +138,7 @@ export class ClaudePageAnalyzer {
 
     // Add metadata
     analysis.analyzedAt = Date.now();
-    analysis.modelUsed = 'claude-sonnet-4-5-20250929';
+    analysis.modelUsed = claudeService.getDefaultModel();
     analysis.tokensUsed = response.usage?.outputTokens;
 
     return analysis;

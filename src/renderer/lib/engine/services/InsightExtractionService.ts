@@ -82,7 +82,7 @@ export class InsightExtractionService {
 
       // Use Claude Haiku for fast, cheap extraction
       const response = await claudeService.execute({
-        model: 'claude-haiku-4-5',
+        model: claudeService.getDefaultModel(),
         prompt: this.buildExtractionPrompt(content, stageType),
         maxTokens: 2000,
         extendedThinking: false, // No thinking needed for extraction

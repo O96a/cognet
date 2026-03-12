@@ -43,34 +43,27 @@ export function App(): React.ReactElement {
   React.useEffect(() => {
     async function initialize() {
       try {
-        // Initialize IPC if available
-        if (ipcClient.isAvailable()) {
-          // Load settings
+        // Load settings
+        try {
           const settings = await ipcClient.getSettings();
           updateSettings(settings);
+        } catch {
+          console.warn('Using default settings');
+        }
 
-          // Load API key and initialize Claude
-          try {
-            // @ts-expect-error - Using internal invoke for settings:get
-            const apiKeyResult = await ipcClient.ipc?.invoke('settings:get', 'anthropic_api_key');
-            if (apiKeyResult?.value) {
-              console.log('✅ Anthropic API key loaded, initializing ClaudeService...');
-              claudeService.initialize(apiKeyResult.value);
-            } else {
-              console.warn('⚠️  No Anthropic API key found. Please add one in Settings.');
-            }
-          } catch (error) {
-            console.warn('Failed to load API key:', error);
-          }
+        // Initialize Ollama
+        claudeService.initialize();
+        console.log(`✅ Ollama configured: ${claudeService.getOllamaUrl()} | model: ${claudeService.getDefaultModel()}`);
 
-          // Load all journeys
+        // Load all journeys
+        try {
           const journeys = await ipcClient.listJourneys();
           setAllJourneys(journeys);
           if (journeys.length > 0) {
             setCurrentJourney(journeys[0]);
           }
-        } else {
-          console.warn('Running outside Electron - IPC not available');
+        } catch {
+          console.warn('Failed to load journeys');
         }
       } catch (error) {
         console.error('Failed to initialize app:', error);
@@ -84,8 +77,6 @@ export function App(): React.ReactElement {
 
   // Refresh journey list when a new journey is created
   const refreshJourneyList = React.useCallback(async () => {
-    if (!ipcClient.isAvailable()) return;
-
     try {
       const journeys = await ipcClient.listJourneys();
       setAllJourneys(journeys);
@@ -96,8 +87,6 @@ export function App(): React.ReactElement {
 
   // Listen for journey updates from main process
   React.useEffect(() => {
-    if (!ipcClient.isAvailable()) return;
-
     const unsubscribe = ipcClient.on('journey:updated', (journey) => {
       setCurrentJourney(journey as typeof currentJourney);
     });
@@ -109,7 +98,7 @@ export function App(): React.ReactElement {
 
   // Poll for journey updates when status is 'running'
   React.useEffect(() => {
-    if (!currentJourney || currentJourney.status !== 'running' || !ipcClient.isAvailable()) {
+    if (!currentJourney || currentJourney.status !== 'running') {
       return;
     }
 

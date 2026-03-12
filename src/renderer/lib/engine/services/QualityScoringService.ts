@@ -16,9 +16,10 @@
 
 import type { Stage, StageType } from '../../../../types';
 import type { QualityReport, QualityScores } from '../types/optimization-types';
-import { claudeService, type ClaudeModel } from '../../../services/claude/ClaudeService';
+import { claudeService } from '../../../services/claude/ClaudeService';
 
-const QUALITY_MODEL: ClaudeModel = 'claude-haiku-4-5'; // Fast and cost-effective
+// Uses the currently configured Ollama model (resolved lazily at call time)
+
 const MAX_QUALITY_TOKENS = 1000; // Keep evaluation concise
 
 /**
@@ -175,9 +176,9 @@ export class QualityScoringService {
       // Build evaluation prompt
       const prompt = QUALITY_EVALUATION_PROMPT(stage, criteria);
 
-      // Call Claude Haiku for fast evaluation
+      // Call Ollama for fast evaluation
       const response = await claudeService.execute({
-        model: QUALITY_MODEL,
+        model: claudeService.getDefaultModel(),
         prompt,
         maxTokens: MAX_QUALITY_TOKENS,
         extendedThinking: false, // No need for extended thinking in evaluation

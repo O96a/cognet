@@ -1453,7 +1453,6 @@ export class PageGeneratorService {
         label: stage.type,
         type: 'stage',
         group: index + 1,
-        artifacts: stage.artifacts.length,
       });
     });
 

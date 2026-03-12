@@ -116,7 +116,7 @@ export function useFocusTrap(enabled: boolean = true) {
  * Hook for announcing screen reader messages
  */
 export function useScreenReaderAnnounce() {
-  const announceRef = useRef<HTMLDivElement>(null);
+  const announceRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     // Create live region for screen reader announcements

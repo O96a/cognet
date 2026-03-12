@@ -227,7 +227,7 @@ Subtitle: [your subtitle]`;
 
     const response = await claudeService.execute({
       prompt: simplePrompt,
-      model: 'claude-sonnet-4-5-20250929',
+      model: claudeService.getDefaultModel(),
       extendedThinking: false, // Disable for faster, more direct response
       maxTokens: 200, // Shorter response expected
     });
@@ -398,7 +398,7 @@ Write it like you're standing on that stage right now.`;
   try {
     const response = await claudeService.execute({
       prompt,
-      model: 'claude-sonnet-4-5-20250929',
+      model: claudeService.getDefaultModel(),
       extendedThinking: true,
       thinkingBudget: 3000, // Deep analysis for storytelling
       maxTokens: 4000,

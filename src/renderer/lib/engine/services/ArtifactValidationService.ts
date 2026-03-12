@@ -35,7 +35,7 @@ export class ArtifactValidationService {
 
     try {
       const response = await claudeService.execute({
-        model: 'claude-sonnet-4-5-20250929',
+        model: claudeService.getDefaultModel(),
         prompt: extractionPrompt,
         extendedThinking: false,
         maxTokens: 8000,

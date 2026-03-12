@@ -62,24 +62,13 @@ const STAGE_TYPES: StageType[] = [
 const SUMMARY_STAGE: StageType = 'building'; // Reuse building stage for summary
 
 /**
- * Intelligent model selection per stage
- * Optimizes for cost and performance based on stage requirements
- *
- * Strategy:
- * - Haiku 4.5: Fast, cost-effective for simpler tasks
- * - Sonnet 4.5: Balanced power and speed for complex tasks
- * - Opus 4: Maximum capability for critical thinking
+ * Model selection per stage
+ * With Ollama all stages use the configured default model.
+ * The per-stage key is kept so a future multi-model backend can slot in.
  */
-const MODEL_PER_STAGE: Record<StageType, ClaudeModel> = {
-  discovering: 'claude-sonnet-4-5-20250929',  // Complex research requires depth
-  chasing: 'claude-haiku-4-5',                 // Fast problem identification
-  solving: 'claude-sonnet-4-5-20250929',      // Multiple solutions need depth
-  challenging: 'claude-opus-4-20250514',      // Critical thinking needs max capability
-  questioning: 'claude-haiku-4-5',             // Fast question generation
-  searching: 'claude-sonnet-4-5-20250929',    // Complex research and synthesis
-  imagining: 'claude-sonnet-4-5-20250929',    // Creative scenarios need depth
-  building: 'claude-opus-4-20250514',         // Highest quality artifacts
-};
+function getModelForStage(_type: StageType): ClaudeModel {
+  return claudeService.getDefaultModel();
+}
 
 /**
  * Optimized thinking budgets per stage type
@@ -222,7 +211,9 @@ Follow this structured approach:
 </quality_guidelines>
 `;
 
-const STAGE_PROMPTS = {
+type StagePromptBuilder = (context: ExplorationContext, input: string, stagesRemaining?: number) => string;
+
+const STAGE_PROMPTS: Record<StageType, StagePromptBuilder> = {
   discovering: (context: ExplorationContext, input: string, stagesRemaining?: number) => `
 You are in the DISCOVERING stage of an exploration journey.
 Current date: ${new Date().toISOString().split('T')[0]}
@@ -845,7 +836,7 @@ For each scenario, provide:
 </quality_guidelines>
 `,
 
-  building: (context: ExplorationContext, stagesRemaining?: number) => `
+  building: (context: ExplorationContext, _input: string, stagesRemaining?: number) => `
 You are in the BUILDING stage - creating concrete artifacts.
 Current date: ${new Date().toISOString().split('T')[0]}
 
@@ -1052,10 +1043,10 @@ export class ExplorationEngine {
 
     try {
       // Execute with Claude using Extended Thinking and Streaming
-      console.log(`🤖 Invoking ${MODEL_PER_STAGE[type]} with ${this.config.extendedThinking ? 'Extended Thinking' : 'standard mode'}...`);
+      console.log(`🤖 Invoking ${getModelForStage(type)} with Ollama...`);
 
       const response = await claudeService.execute({
-        model: MODEL_PER_STAGE[type],
+        model: getModelForStage(type),
         prompt,
         extendedThinking: this.config.extendedThinking,
         thinkingBudget: THINKING_BUDGETS[type], // Dynamic budget optimized per stage
@@ -1080,7 +1071,7 @@ export class ExplorationEngine {
       });
 
       stage.result = response.content;
-      stage.thinking = response.thinking || null;
+      stage.thinking = response.thinking || undefined;
       stage.status = 'complete';
 
       // Log usage stats
@@ -1170,14 +1161,12 @@ export class ExplorationEngine {
       stage.result = `Error: ${error instanceof Error ? error.message : String(error)}`;
     }
 
-    // Save stage to database via IPC
+    // Save stage to database (IPC or in-memory fallback)
     try {
-      if (ipcClient.isAvailable()) {
-        await ipcClient.createStage(stage);
-        console.log(`💾 Stage saved to database: ${stage.id}`);
-      }
+      await ipcClient.createStage(stage);
+      console.log(`💾 Stage saved: ${stage.id}`);
     } catch (error) {
-      console.error('Failed to save stage to database:', error);
+      console.error('Failed to save stage:', error);
     }
 
     // Clear active stage now that it's saved
@@ -1190,14 +1179,12 @@ export class ExplorationEngine {
     // Check if journey has been stopped or paused before auto-progressing
     let journeyStatus: 'continue' | 'stopped' | 'paused' = 'continue';
     try {
-      if (ipcClient.isAvailable()) {
-        const updatedJourney = await ipcClient.getJourney(this.context.journeyId);
-        if (updatedJourney) {
-          if (updatedJourney.status === 'stopped') {
-            journeyStatus = 'stopped';
-          } else if (updatedJourney.status === 'paused') {
-            journeyStatus = 'paused';
-          }
+      const updatedJourney = await ipcClient.getJourney(this.context.journeyId);
+      if (updatedJourney) {
+        if (updatedJourney.status === 'stopped') {
+          journeyStatus = 'stopped';
+        } else if (updatedJourney.status === 'paused') {
+          journeyStatus = 'paused';
         }
       }
     } catch (error) {
@@ -1246,15 +1233,13 @@ export class ExplorationEngine {
    */
   private async markJourneyComplete(): Promise<void> {
     try {
-      if (ipcClient.isAvailable()) {
-        const journey = await ipcClient.getJourney(this.context.journeyId);
-        if (journey) {
-          await ipcClient.updateJourney({
-            ...journey,
-            status: 'complete',
-          });
-          console.log('✅ Journey marked as complete');
-        }
+      const journey = await ipcClient.getJourney(this.context.journeyId);
+      if (journey) {
+        await ipcClient.updateJourney({
+          ...journey,
+          status: 'complete',
+        });
+        console.log('✅ Journey marked as complete');
       }
     } catch (error) {
       console.error('Failed to mark journey as complete:', error);

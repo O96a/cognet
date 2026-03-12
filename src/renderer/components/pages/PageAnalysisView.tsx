@@ -89,7 +89,7 @@ export function PageAnalysisView({
         {/* All Available Templates */}
         {['website', 'report', 'wiki', 'presentation', 'timeline', 'mindmap', 'literature', 'carousel', 'linkedin-content'].map((template) => {
           const isPrimary = analysis.recommendations.primary === template;
-          const isSecondary = analysis.recommendations.secondary?.includes(template);
+          const isSecondary = analysis.recommendations.secondary?.includes(template as import('@/services/claude/ClaudePageAnalyzer').TemplateType);
           const isRecommended = isPrimary || isSecondary;
           const isSelected = selectedTemplate === template;
 
