@@ -281,7 +281,7 @@ export function PageGeneratorDialog({
       if (ipcClient.isAvailable()) {
         await ipcClient.createPage(page);
         console.log(`💾 Page saved to database and file system`);
-        console.log(`📁 Location: ~/Library/Application Support/perpetua/pages/${journey.id}/`);
+        console.log(`📁 Location: ~/Library/Application Support/cognet/pages/${journey.id}/`);
         console.log(`📄 File: ${page.filePath}`);
       }
 
@@ -295,7 +295,7 @@ export function PageGeneratorDialog({
         const url = URL.createObjectURL(blob);
 
         // Open with unique window name to prevent browser from reusing window
-        const windowName = `perpetua_${page.id}_${Date.now()}`;
+        const windowName = `cognet_${page.id}_${Date.now()}`;
         window.open(url, windowName);
 
         console.log(`🚀 Opened NEW ${selectedTemplate} page`);

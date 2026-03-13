@@ -1,4 +1,4 @@
-# PERPETUA - Milestones & Progress Tracker
+# COGNET - Milestones & Progress Tracker
 
 **Project Start:** October 22, 2025
 **Target Launch:** January 22, 2026
@@ -26,7 +26,7 @@ Phase 3: Polish & Launch   [░░░░░░░░░░]  0%
 ### ✅ Milestone 0: Concept & Planning (Week 0)
 **Completed:** October 22, 2025
 
-- [x] Brainstorm concept (Perpetua - Infinite Thought Engine)
+- [x] Brainstorm concept (Cognet - Infinite Thought Engine)
 - [x] Define core features and 8-stage cycle
 - [x] Choose technology stack
 - [x] Establish Scandinavian design principles
@@ -81,7 +81,7 @@ Phase 3: Polish & Launch   [░░░░░░░░░░]  0%
 - [ ] Beautiful Scandinavian UI
 
 **Deliverables:**
-1. Perpetua can autonomously browse web and research
+1. Cognet can autonomously browse web and research
 2. Creates beautiful artifacts (docs, code, visualizations)
 3. Users can control running journeys
 4. App is visually stunning and delightful
@@ -252,7 +252,7 @@ Phase 3: Polish & Launch   [░░░░░░░░░░]  0%
 ### October 2025
 
 **Week of Oct 22:**
-- 🎯 **Project Launched** - Perpetua concept defined and documented
+- 🎯 **Project Launched** - Cognet concept defined and documented
 - 📚 **Documentation Complete** - All planning docs created
 - 🎨 **Design System Established** - Scandinavian principles defined
 - 🏗️ **Architecture Designed** - Technical foundation planned
@@ -324,7 +324,7 @@ Phase 3: Polish & Launch   [░░░░░░░░░░]  0%
 ## 📊 Progress Visualization
 
 ```
-PERPETUA BUILD TIMELINE
+COGNET BUILD TIMELINE
 
 Oct 2025          Nov 2025          Dec 2025          Jan 2026
 │                 │                 │                 │

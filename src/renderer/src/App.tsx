@@ -1,6 +1,6 @@
 /**
  * Main Application Component
- * Entry point for Perpetua React application
+ * Entry point for Cognet React application
  */
 
 import * as React from 'react';
@@ -213,7 +213,7 @@ export function App(): React.ReactElement {
   }, [removeJourney, refreshJourneyList]);
 
   if (isLoading) {
-    return <LoadingOverlay message="Initializing Perpetua..." />;
+    return <LoadingOverlay message="Initializing Cognet..." />;
   }
 
   return (

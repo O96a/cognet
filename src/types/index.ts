@@ -205,14 +205,14 @@ export interface HealthCheck {
 /**
  * Error types
  */
-export class PerpetuaError extends Error {
+export class CognetError extends Error {
   constructor(
     message: string,
     public code: string,
     public details?: any
   ) {
     super(message);
-    this.name = 'PerpetuaError';
+    this.name = 'CognetError';
   }
 }
 

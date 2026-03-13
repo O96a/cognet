@@ -9,7 +9,7 @@
 
 ## Overview
 
-Perpetua uses **SQLite** via `better-sqlite3` for local-first data storage with:
+Cognet uses **SQLite** via `better-sqlite3` for local-first data storage with:
 - 🚀 Fast synchronous operations
 - 💾 ACID transactions
 - 🔒 Type-safe queries
@@ -109,7 +109,7 @@ export class DatabaseService {
   private db: Database.Database;
 
   constructor() {
-    const dbPath = path.join(app.getPath('userData'), 'perpetua.db');
+    const dbPath = path.join(app.getPath('userData'), 'cognet.db');
     this.db = new Database(dbPath);
 
     // Enable WAL mode for better concurrency

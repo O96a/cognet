@@ -1,10 +1,10 @@
-# Perpetua Design System
+# Cognet Design System
 
 A Scandinavian-inspired design system built with React, TypeScript, and TailwindCSS.
 
 ## Philosophy
 
-The Perpetua design system follows Scandinavian design principles:
+The Cognet design system follows Scandinavian design principles:
 
 - **Minimalism** - Every element serves a purpose
 - **Functionality** - Form follows function
@@ -15,7 +15,7 @@ The Perpetua design system follows Scandinavian design principles:
 
 ## Installation
 
-The design system is built into the Perpetua application. Import components directly:
+The design system is built into the Cognet application. Import components directly:
 
 ```typescript
 import { Button, Input, Card } from './components/design-system';
@@ -47,7 +47,7 @@ import { Button, Input, Card, Badge } from './components/design-system';
 function Example() {
   return (
     <Card padding="medium">
-      <h2>Welcome to Perpetua</h2>
+      <h2>Welcome to Cognet</h2>
 
       <Input
         label="Journey starting point"
@@ -305,4 +305,4 @@ For questions or issues, refer to:
 **Version:** 1.0.0
 **Last Updated:** October 22, 2025
 
-**"Simple, functional, beautiful. That's Perpetua."**
+**"Simple, functional, beautiful. That's Cognet."**

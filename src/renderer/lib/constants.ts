@@ -71,9 +71,9 @@ export const ROUTES = {
  * Local storage keys
  */
 export const STORAGE_KEYS = {
-  API_KEY: 'perpetua_api_key',
-  SETTINGS: 'perpetua_settings',
-  RECENT_JOURNEYS: 'perpetua_recent_journeys',
+  API_KEY: 'cognet_api_key',
+  SETTINGS: 'cognet_settings',
+  RECENT_JOURNEYS: 'cognet_recent_journeys',
 } as const;
 
 /**

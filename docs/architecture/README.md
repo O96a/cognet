@@ -1,8 +1,8 @@
-# Perpetua Architecture Documentation
+# Cognet Architecture Documentation
 
-**Welcome to Perpetua's comprehensive architecture documentation.**
+**Welcome to Cognet's comprehensive architecture documentation.**
 
-This directory contains detailed technical specifications, architectural decisions, and implementation guidelines for the Perpetua desktop application.
+This directory contains detailed technical specifications, architectural decisions, and implementation guidelines for the Cognet desktop application.
 
 ---
 
@@ -144,7 +144,7 @@ Located in **[10-adrs/](./10-adrs/)**:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PERPETUA DESKTOP APP                     │
+│                    COGNET DESKTOP APP                     │
 │                                                             │
 │  ┌───────────────────────────────────────────────────────┐ │
 │  │         RENDERER PROCESS (React + TypeScript)         │ │
@@ -322,7 +322,7 @@ Located in **[10-adrs/](./10-adrs/)**:
 
 ## 📜 License
 
-This documentation is part of the Perpetua project.
+This documentation is part of the Cognet project.
 See [LICENSE](/LICENSE) for details.
 
 ---

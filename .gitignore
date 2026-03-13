@@ -27,7 +27,7 @@ claude-flow
 # Removed Windows wrapper files per user request
 hive-mind-prompt-*.txt
 
-# Perpetua Specific
+# Cognet Specific
 
 # Environment variables
 .env
@@ -88,7 +88,7 @@ tmp/
 temp/
 *.tmp
 
-# User data (Perpetua)
+# User data (Cognet)
 user-data/
 journeys/
 artifacts/

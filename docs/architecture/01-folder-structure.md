@@ -10,7 +10,7 @@
 ## Complete Folder Structure
 
 ```
-Perpetua/
+Cognet/
 ├── .claude/                          # Claude-Flow integration
 │   ├── commands/                     # Custom slash commands
 │   └── skills/                       # Agent skills
@@ -393,7 +393,7 @@ dist/
 │   └── ...
 ├── preload/                 # Compiled preload
 │   └── index.js
-└── perpetua.db             # Database (user data)
+└── cognet.db             # Database (user data)
 ```
 
 ---

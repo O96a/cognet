@@ -1,6 +1,6 @@
 # Development Setup Guide
 
-Get Perpetua up and running on your local machine.
+Get Cognet up and running on your local machine.
 
 ---
 
@@ -373,7 +373,7 @@ pnpm rebuild
 pkill -f electron
 
 # Delete database file (data will be lost!)
-rm perpetua.db
+rm cognet.db
 ```
 
 ---

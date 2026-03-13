@@ -1,7 +1,7 @@
 {
-  "name": "perpetua-renderer",
+  "name": "cognet-renderer",
   "version": "1.0.0",
-  "description": "Perpetua React renderer process",
+  "description": "Cognet React renderer process",
   "type": "module",
   "scripts": {
     "dev": "vite",

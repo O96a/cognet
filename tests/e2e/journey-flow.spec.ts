@@ -17,7 +17,7 @@ test.describe('Journey Creation and Exploration', () => {
   });
 
   test('should display welcome screen on first launch', async () => {
-    await expect(page.locator('h1')).toContainText('Perpetua');
+    await expect(page.locator('h1')).toContainText('Cognet');
     await expect(page.locator('[data-testid="start-journey-input"]')).toBeVisible();
   });
 

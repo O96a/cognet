@@ -9,7 +9,7 @@
 
 ## Configuration Strategy
 
-Perpetua uses **three separate TypeScript configurations**:
+Cognet uses **three separate TypeScript configurations**:
 1. **tsconfig.json** - Root configuration (shared settings)
 2. **tsconfig.main.json** - Main process (Node.js environment)
 3. **tsconfig.renderer.json** - Renderer process (Browser environment)

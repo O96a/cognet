@@ -1,6 +1,6 @@
 /**
  * Exploration Engine
- * The core of Perpetua - manages the infinite 8-stage exploration cycle
+ * The core of Cognet - manages the infinite 8-stage exploration cycle
  *
  * Stages:
  * 1. DISCOVERING  - Research and explore the topic

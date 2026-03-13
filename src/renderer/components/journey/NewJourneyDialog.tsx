@@ -118,7 +118,7 @@ export function NewJourneyDialog({ open, onOpenChange }: NewJourneyDialogProps):
               </div>
 
               <Dialog.Description className="text-sm text-gray-600">
-                Enter a topic, question, or problem to explore. Perpetua will guide you through
+                Enter a topic, question, or problem to explore. Cognet will guide you through
                 an intelligent exploration journey with multiple stages of discovery.
                 <span className="block mt-2 text-xs text-primary-600 font-medium">
                   ✨ The final stage will be a comprehensive summary with actionable insights

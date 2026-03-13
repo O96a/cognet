@@ -123,7 +123,7 @@ Create an interactive concept map:
 - ✅ SVG icons only (no emoji in presentations for PDF compatibility)
 
 **Brand Consistency (USER REQUIREMENT):**
-- ✅ "Perpetua" branding in top-left header
+- ✅ "Cognet" branding in top-left header
 - ✅ Font and style must match overall design
 - ✅ Visual storytelling concept maintained
 - ✅ Content fidelity preserved (complete, not summarized)
@@ -663,8 +663,8 @@ This design MUST be unique. Do NOT default to generic layouts or safe choices. T
 **Technical Constraints**:
 ${designLanguage.uniqueness.constraints.map(c => `- ${c}`).join('\n')}
 
-**Perpetua Branding**:
-- Place "Perpetua" in top-left header
+**Cognet Branding**:
+- Place "Cognet" in top-left header
 - Style the logo to match the ${designLanguage.visualStyle.primary} aesthetic
 - ${getBrandingSuggestions(designLanguage.visualStyle.primary)}
 `;
@@ -1486,7 +1486,7 @@ function layoutTree(root, orientation = 'vertical') {
 2. Generate 10 presentations with same content → verify variety
 3. Test timeline layouts (all 6 variations)
 4. Test mindmap layouts (all 6 variations)
-5. Verify Perpetua branding consistency across all styles
+5. Verify Cognet branding consistency across all styles
 6. Ensure all designs respect technical constraints
 7. User testing: "Does this make you say 'wow'?"
 
@@ -1741,7 +1741,7 @@ Goal: Make users stop and think "I've never seen a design like this."
 ### 6.2 Qualitative Metrics
 
 **Design Principles:**
-- [ ] Perpetua branding consistent and well-integrated
+- [ ] Cognet branding consistent and well-integrated
 - [ ] Visual storytelling maintained
 - [ ] Content fidelity preserved (100% of journey content)
 - [ ] Experimental but doable (no impossible designs)
@@ -1841,7 +1841,7 @@ Goal: Make users stop and think "I've never seen a design like this."
 - [ ] Generate 10 presentations from same journey → verify variety
 - [ ] Test all 6 timeline layouts
 - [ ] Test all 6 mindmap layouts
-- [ ] Verify Perpetua branding across 40 generations (all templates × styles)
+- [ ] Verify Cognet branding across 40 generations (all templates × styles)
 - [ ] Verify technical constraints (vanilla JS/CSS, CSP compliance)
 - [ ] User testing with 3-5 users ("wow" factor survey)
 - [ ] Performance testing (generation time < 3 min per template)
@@ -1873,7 +1873,7 @@ Goal: Make users stop and think "I've never seen a design like this."
 - ✅ Timeline and mindmap match website/presentation quality
 - ✅ No two generations look the same (< 30% similarity)
 - ✅ 70%+ users say designs are "wow"-worthy
-- ✅ Perpetua branding consistent across all styles
+- ✅ Cognet branding consistent across all styles
 - ✅ All designs technically feasible (vanilla JS/CSS)
 - ✅ Content fidelity maintained (no information loss)
 
@@ -1902,4 +1902,4 @@ Goal: Make users stop and think "I've never seen a design like this."
 
 ---
 
-**Let's make every Perpetua generation a work of art. 🎨✨**
+**Let's make every Cognet generation a work of art. 🎨✨**

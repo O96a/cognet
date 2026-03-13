@@ -1,4 +1,4 @@
-# PERPETUA - The Infinite Thought Engine
+# COGNET - The Infinite Thought Engine
 
 **Version:** 1.0.0
 **Status:** 🚀 Active Development
@@ -21,11 +21,11 @@
 ## 🌟 Vision & Concept
 
 ### The One-Liner
-**"Perpetua is Claude that never stops exploring your ideas."**
+**"Cognet is Claude that never stops exploring your ideas."**
 
-### What Is Perpetua?
+### What Is Cognet?
 
-Perpetua is a revolutionary AI-powered exploration engine that embodies Anthropic's "Keep X" campaign themes:
+Cognet is a revolutionary AI-powered exploration engine that embodies Anthropic's "Keep X" campaign themes:
 - **Keep Discovering** - Autonomous exploration of topics
 - **Keep Chasing** - Finding deeper problems and questions
 - **Keep Solving** - Generating solutions and prototypes
@@ -37,15 +37,15 @@ Perpetua is a revolutionary AI-powered exploration engine that embodies Anthropi
 
 ### The Magic
 
-Unlike traditional AI assistants where YOU do all the work and the AI just responds, **Perpetua runs autonomously**:
+Unlike traditional AI assistants where YOU do all the work and the AI just responds, **Cognet runs autonomously**:
 
 1. You give it a starting point (question, problem, curiosity, or just a word)
-2. Perpetua enters an infinite exploration cycle
+2. Cognet enters an infinite exploration cycle
 3. It continuously discovers, questions, solves, challenges, searches, imagines, and builds
 4. You can steer, pause, or zoom into any insight
 5. Come back to dozens of insights and real artifacts
 
-**It's a perpetual motion machine for thought.**
+**It's a cognetl motion machine for thought.**
 
 ---
 
@@ -53,7 +53,7 @@ Unlike traditional AI assistants where YOU do all the work and the AI just respo
 
 ### Design Principles
 
-1. **Perpetual Motion** - The engine never truly stops; it builds momentum
+1. **Cognetl Motion** - The engine never truly stops; it builds momentum
 2. **Infinite Depth** - You can zoom into any insight and start a new journey
 3. **Autonomous Intelligence** - Runs on autopilot but always steerable
 4. **Tangible Output** - Every journey produces real artifacts you can use
@@ -61,9 +61,9 @@ Unlike traditional AI assistants where YOU do all the work and the AI just respo
 
 ### User Experience Goals
 
-- **Mesmerizing** - Watching Perpetua think should be captivating
+- **Mesmerizing** - Watching Cognet think should be captivating
 - **Effortless** - Minimal input for maximum exploration
-- **Trustworthy** - Always clear what Perpetua is doing and why
+- **Trustworthy** - Always clear what Cognet is doing and why
 - **Productive** - Every journey yields usable results
 - **Addictive** - Users want to start journey after journey
 
@@ -131,7 +131,7 @@ Unlike traditional AI assistants where YOU do all the work and the AI just respo
 ## 📁 Project Structure
 
 ```
-Perpetua/
+Cognet/
 ├── docs/                    # Detailed documentation
 │   ├── SETUP.md            # Development setup
 │   ├── API.md              # API documentation
@@ -347,4 +347,4 @@ Discussions: GitHub Discussions
 
 ---
 
-**"Perpetua never stops. Neither should your curiosity."**
+**"Cognet never stops. Neither should your curiosity."**

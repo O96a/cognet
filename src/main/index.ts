@@ -26,7 +26,7 @@ const isProduction = !isDevelopment;
 // This MUST be called before app.whenReady() or app.on('ready')
 protocol.registerSchemesAsPrivileged([
   {
-    scheme: 'perpetua',
+    scheme: 'cognet',
     privileges: {
       secure: true,
       standard: true,
@@ -164,7 +164,7 @@ async function initializeServices(): Promise<void> {
 
   try {
     // Initialize database
-    const dbPath = path.join(app.getPath('userData'), 'perpetua.db');
+    const dbPath = path.join(app.getPath('userData'), 'cognet.db');
     databaseService = new DatabaseService(dbPath);
     await databaseService.initialize();
     logger.info('Database service initialized');

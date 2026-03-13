@@ -8,7 +8,7 @@
 
 ## Quick Overview
 
-This document summarizes the architectural design for 12 major optimization improvements to Perpetua's ExplorationEngine, expected to deliver **40-60% better journey output quality**.
+This document summarizes the architectural design for 12 major optimization improvements to Cognet's ExplorationEngine, expected to deliver **40-60% better journey output quality**.
 
 ### Deliverables Created
 

@@ -1,6 +1,6 @@
 /** @type {import('jest').Config} */
 module.exports = {
-  displayName: 'Perpetua Tests',
+  displayName: 'Cognet Tests',
   preset: 'ts-jest',
   testEnvironment: 'node',
 

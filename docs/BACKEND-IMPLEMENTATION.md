@@ -6,7 +6,7 @@
 
 ## Overview
 
-Complete Electron main process infrastructure for Perpetua with SQLite database, type-safe IPC communication, secure file operations, and comprehensive testing.
+Complete Electron main process infrastructure for Cognet with SQLite database, type-safe IPC communication, secure file operations, and comprehensive testing.
 
 ## Architecture
 
@@ -207,7 +207,7 @@ object-src 'none';
 - Environment-based filtering
 - Structured JSON logs
 
-**Log Location:** `userData/logs/perpetua.log`
+**Log Location:** `userData/logs/cognet.log`
 
 ### 7. Preload Script
 
@@ -381,7 +381,7 @@ npm run test:coverage # Generate coverage report
 
 **Error Types:**
 ```typescript
-class PerpetuaError extends Error {
+class CognetError extends Error {
   constructor(
     message: string,
     public code: string,
@@ -491,7 +491,7 @@ NODE_ENV=development npm start
 
 View logs:
 ```bash
-tail -f ~/Library/Application Support/Perpetua/logs/perpetua.log
+tail -f ~/Library/Application Support/Cognet/logs/cognet.log
 ```
 
 ## Dependencies
@@ -510,15 +510,15 @@ tail -f ~/Library/Application Support/Perpetua/logs/perpetua.log
 
 **User Data:**
 ```
-macOS: ~/Library/Application Support/Perpetua/
-Windows: %APPDATA%/Perpetua/
-Linux: ~/.config/Perpetua/
+macOS: ~/Library/Application Support/Cognet/
+Windows: %APPDATA%/Cognet/
+Linux: ~/.config/Cognet/
 ```
 
 **Structure:**
 ```
-Perpetua/
-├── perpetua.db           # SQLite database
+Cognet/
+├── cognet.db           # SQLite database
 ├── artifacts/            # Artifact files
 │   ├── documents/
 │   ├── code/
@@ -526,7 +526,7 @@ Perpetua/
 │   ├── mindmaps/
 │   └── other/
 └── logs/
-    └── perpetua.log      # Application logs
+    └── cognet.log      # Application logs
 ```
 
 ## Summary
@@ -540,7 +540,7 @@ Perpetua/
 ✅ **Full test coverage**
 ✅ **Production-ready error handling**
 
-The backend is ready for frontend integration and provides a solid foundation for the Perpetua exploration engine.
+The backend is ready for frontend integration and provides a solid foundation for the Cognet exploration engine.
 
 ---
 

@@ -1,7 +1,7 @@
 # Integration Review - Executive Summary
 
 **Date:** October 22, 2025
-**Project:** Perpetua (Odyssey)
+**Project:** Cognet (Odyssey)
 **Status:** 🔴 **CRITICAL**
 **Full Report:** [integration-report.md](./integration-report.md)
 
@@ -9,7 +9,7 @@
 
 ## 🎯 Key Finding
 
-**The Perpetua project has exceptional documentation but ZERO actual implementation.**
+**The Cognet project has exceptional documentation but ZERO actual implementation.**
 
 ---
 
@@ -133,9 +133,9 @@ Execute **rapid foundation sprint** with parallel agent coordination to catch up
 **Error:** `ReferenceError: window is not defined` in service worker
 
 **Root Cause:**
-- Error is from Chrome extension, not Perpetua
+- Error is from Chrome extension, not Cognet
 - Service workers cannot access `window` object
-- Perpetua uses Electron (different architecture)
+- Cognet uses Electron (different architecture)
 
 **Resolution:**
 - ✅ Ignore this error completely
@@ -193,13 +193,13 @@ Execute these tasks **in parallel** (single message):
 ---
 
 **Coordinator:** Integration Coordinator
-**Session:** swarm-perpetua-dev
+**Session:** swarm-cognet-dev
 **Full Details:** docs/integration-report.md
 **Memory Keys:**
-- `perpetua-dev/integration/status`
-- `perpetua-dev/integration/blockers`
-- `perpetua-dev/integration/recommendations`
-- `perpetua-dev/architecture/clarification`
+- `cognet-dev/integration/status`
+- `cognet-dev/integration/blockers`
+- `cognet-dev/integration/recommendations`
+- `cognet-dev/architecture/clarification`
 
 ---
 

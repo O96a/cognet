@@ -3,13 +3,13 @@
 **Status:** Accepted
 **Date:** 2025-10-22
 **Deciders:** System Architect
-**Context:** Perpetua Architecture Design
+**Context:** Cognet Architecture Design
 
 ---
 
 ## Context and Problem Statement
 
-Perpetua needs local data storage for:
+Cognet needs local data storage for:
 - Journey history
 - Stage results
 - Artifacts

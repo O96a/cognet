@@ -1,4 +1,4 @@
-# PERPETUA - Development Roadmap
+# COGNET - Development Roadmap
 
 **Timeline:** 3 Months (12 Weeks)
 **Start Date:** October 22, 2025
@@ -298,7 +298,7 @@ CREATE TABLE artifacts (
 - Create research summaries
 ```
 
-**Deliverable:** Perpetua can autonomously browse the web and gather research
+**Deliverable:** Cognet can autonomously browse the web and gather research
 
 ---
 
@@ -597,7 +597,7 @@ Space: Pause/resume
 ↓/↑: Navigate stages
 ```
 
-**Deliverable:** Power users can navigate and use Perpetua like pros
+**Deliverable:** Power users can navigate and use Cognet like pros
 
 ---
 
@@ -654,7 +654,7 @@ Space: Pause/resume
 
 **Day 1-2: Landing Page**
 ```typescript
-- Build landing page (with Perpetua!)
+- Build landing page (with Cognet!)
 - Create demo video
 - Write compelling copy
 - Add waitlist/signup
@@ -689,13 +689,13 @@ Space: Pause/resume
 
 **Day 7: Hacker News & Broader Launch**
 ```typescript
-- Post "Show HN: Perpetua"
+- Post "Show HN: Cognet"
 - Share on Reddit (r/SideProject, r/InternetIsBeautiful)
 - Reach out to tech journalists
 - Celebrate! 🎉
 ```
 
-**Deliverable:** Perpetua is live and gaining users!
+**Deliverable:** Cognet is live and gaining users!
 
 **MONTH 3 MILESTONE:**
 ✅ Auto-pilot is magical

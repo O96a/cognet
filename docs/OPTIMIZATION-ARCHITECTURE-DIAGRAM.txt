@@ -1,5 +1,5 @@
 ╔═══════════════════════════════════════════════════════════════════════════════╗
-║                   PERPETUA OPTIMIZATION ARCHITECTURE                          ║
+║                   COGNET OPTIMIZATION ARCHITECTURE                          ║
 ║                         Journey Quality Enhancement                           ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 

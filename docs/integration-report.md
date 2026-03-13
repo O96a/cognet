@@ -1,8 +1,8 @@
-# PERPETUA - Integration Review & Coordination Report
+# COGNET - Integration Review & Coordination Report
 
 **Review Date:** October 22, 2025
 **Reviewer:** Integration Coordinator
-**Swarm Session:** swarm-perpetua-dev
+**Swarm Session:** swarm-cognet-dev
 **Status:** 🔴 **CRITICAL ISSUES IDENTIFIED**
 
 ---
@@ -10,7 +10,7 @@
 ## 📋 Executive Summary
 
 ### Overview
-This integration review was triggered by a **Chrome Extension service worker error** indicating architectural mismatches in the codebase. Upon investigation, the Perpetua project (codename: Odyssey) is in **early foundation phase** with:
+This integration review was triggered by a **Chrome Extension service worker error** indicating architectural mismatches in the codebase. Upon investigation, the Cognet project (codename: Odyssey) is in **early foundation phase** with:
 
 - ✅ Comprehensive documentation established
 - ✅ Clear architecture and design system defined
@@ -18,7 +18,7 @@ This integration review was triggered by a **Chrome Extension service worker err
 - 🔴 **Critical mismatch between architecture and implementation**
 
 ### Critical Finding
-**The error log provided shows a Chrome Extension manifest, but Perpetua is architected as an Electron desktop application.** This indicates either:
+**The error log provided shows a Chrome Extension manifest, but Cognet is architected as an Electron desktop application.** This indicates either:
 1. Testing with wrong technology stack
 2. Confusion about project architecture
 3. Unrelated error log provided
@@ -127,7 +127,7 @@ The error log shows:
 ❌ Failed to initialize LLM router: ReferenceError: window is not defined
 ```
 
-This suggests someone attempted to use browser-based Claude SDK initialization in a **service worker context**, which is fundamentally incompatible with Perpetua's Electron architecture.
+This suggests someone attempted to use browser-based Claude SDK initialization in a **service worker context**, which is fundamentally incompatible with Cognet's Electron architecture.
 
 **Root Cause Analysis:**
 1. **Architectural Mismatch:** Service workers cannot access `window` object
@@ -609,7 +609,7 @@ src/
 **Root Causes:**
 
 1. **Architecture Mismatch:**
-   - Perpetua is designed as **Electron desktop app**
+   - Cognet is designed as **Electron desktop app**
    - Error is from **Chrome extension service worker**
    - These are fundamentally different architectures
 
@@ -626,13 +626,13 @@ src/
 
 ### Resolution Path
 
-**If Perpetua should be Electron app (per ARCHITECTURE.md):**
+**If Cognet should be Electron app (per ARCHITECTURE.md):**
 - ✅ Ignore Chrome extension error completely
 - ✅ Follow Electron architecture as documented
 - ✅ Implement renderer process with proper IPC
 - ✅ Use Electron-specific APIs
 
-**If Perpetua should be Chrome extension:**
+**If Cognet should be Chrome extension:**
 - ❌ Complete architectural redesign required
 - ❌ Rewrite all documentation
 - ❌ Cannot use Electron, Node.js, SQLite
@@ -724,7 +724,7 @@ All agents are blocked until foundation infrastructure exists:
 
 ### Summary
 
-Perpetua has **outstanding documentation and vision**, but **zero actual implementation**. The project is effectively at **Day 0** despite having comprehensive specs.
+Cognet has **outstanding documentation and vision**, but **zero actual implementation**. The project is effectively at **Day 0** despite having comprehensive specs.
 
 ### Critical Next Steps
 

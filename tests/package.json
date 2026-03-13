@@ -1,7 +1,7 @@
 {
-  "name": "perpetua-tests",
+  "name": "cognet-tests",
   "version": "1.0.0",
-  "description": "Test suite for Perpetua - The Infinite Thought Engine",
+  "description": "Test suite for Cognet - The Infinite Thought Engine",
   "scripts": {
     "test": "jest --coverage --verbose",
     "test:watch": "jest --watch",

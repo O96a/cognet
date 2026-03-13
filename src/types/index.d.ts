@@ -114,7 +114,7 @@ export interface HealthCheck {
 /**
  * Error types
  */
-export declare class PerpetuaError extends Error {
+export declare class CognetError extends Error {
     code: string;
     details?: any;
     constructor(message: string, code: string, details?: any);

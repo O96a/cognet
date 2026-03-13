@@ -3,13 +3,13 @@
 **Status:** Accepted
 **Date:** 2025-10-22
 **Deciders:** System Architect
-**Context:** Perpetua Architecture Design
+**Context:** Cognet Architecture Design
 
 ---
 
 ## Context and Problem Statement
 
-Perpetua needs a build tool that can:
+Cognet needs a build tool that can:
 - Bundle Electron main process (Node.js)
 - Bundle renderer process (React + TypeScript)
 - Bundle preload scripts

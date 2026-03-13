@@ -4,7 +4,7 @@
  * Shared types across the application
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PerpetuaError = exports.DEFAULT_SETTINGS = void 0;
+exports.CognetError = exports.DEFAULT_SETTINGS = void 0;
 exports.isStageType = isStageType;
 exports.isJourneyStatus = isJourneyStatus;
 exports.isArtifactType = isArtifactType;
@@ -21,15 +21,15 @@ exports.DEFAULT_SETTINGS = {
 /**
  * Error types
  */
-class PerpetuaError extends Error {
+class CognetError extends Error {
     constructor(message, code, details) {
         super(message);
         this.code = code;
         this.details = details;
-        this.name = 'PerpetuaError';
+        this.name = 'CognetError';
     }
 }
-exports.PerpetuaError = PerpetuaError;
+exports.CognetError = CognetError;
 /**
  * Type guards
  */

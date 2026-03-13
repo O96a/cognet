@@ -1,9 +1,9 @@
 {
-  "name": "perpetua",
+  "name": "cognet",
   "version": "1.0.0",
-  "description": "Perpetua - The Infinite Thought Engine",
+  "description": "Cognet - The Infinite Thought Engine",
   "main": "dist/main/main/index.js",
-  "author": "Perpetua Team",
+  "author": "Cognet Team",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"npm run dev:vite\" \"npm run dev:electron\"",
@@ -100,8 +100,8 @@
     "wait-on": "^7.2.0"
   },
   "build": {
-    "appId": "com.perpetua.app",
-    "productName": "Perpetua",
+    "appId": "com.cognet.app",
+    "productName": "Cognet",
     "asar": false,
     "directories": {
       "buildResources": "build",

@@ -163,7 +163,7 @@ export class ClaudePageAnalyzer {
       );
     };
 
-    return `You are analyzing an 8-stage exploration journey from Perpetua (The Infinite Thought Engine) to recommend the optimal visualization format.
+    return `You are analyzing an 8-stage exploration journey from Cognet (The Infinite Thought Engine) to recommend the optimal visualization format.
 
 <journey>
 <metadata>

@@ -1,4 +1,4 @@
-# Perpetua - Quick Start Guide for Developers
+# Cognet - Quick Start Guide for Developers
 
 **Last Updated:** October 29, 2025
 
@@ -6,7 +6,7 @@
 
 ## What You're Looking At
 
-You have **Perpetua**, a full-featured Electron desktop application that runs Claude's AI in a beautiful, locally-hosted exploration engine. Users can ask questions and watch Claude autonomously explore topics across 8 different stages, generating insights and artifacts.
+You have **Cognet**, a full-featured Electron desktop application that runs Claude's AI in a beautiful, locally-hosted exploration engine. Users can ask questions and watch Claude autonomously explore topics across 8 different stages, generating insights and artifacts.
 
 ---
 
@@ -127,7 +127,7 @@ npm run build
 # Create macOS .app bundle
 npm run package:mac
 
-# Creates: release/mac-arm64/Perpetua.app
+# Creates: release/mac-arm64/Cognet.app
 # Share this .app file or drag to Applications folder
 ```
 
@@ -238,7 +238,7 @@ npm run dev
 # When ready to ship
 npm run build
 npm run package:mac
-# Creates release/mac-arm64/Perpetua.app
+# Creates release/mac-arm64/Cognet.app
 ```
 
 ### TypeScript + Linting

@@ -22,7 +22,7 @@ class Logger {
 
   constructor() {
     const userDataPath = app?.getPath('userData') || process.cwd();
-    this.logFilePath = path.join(userDataPath, 'logs', 'perpetua.log');
+    this.logFilePath = path.join(userDataPath, 'logs', 'cognet.log');
     this.minLevel = process.env.NODE_ENV === 'development' ? 'debug' : 'info';
 
     // Ensure logs directory exists

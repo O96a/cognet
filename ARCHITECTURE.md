@@ -1,4 +1,4 @@
-# PERPETUA - Technical Architecture
+# COGNET - Technical Architecture
 
 **Version:** 1.0.0
 **Last Updated:** October 22, 2025
@@ -157,7 +157,7 @@ Monitoring:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PERPETUA DESKTOP APP                     │
+│                    COGNET DESKTOP APP                     │
 │                     (Electron Shell)                        │
 │                                                             │
 │  ┌───────────────────────────────────────────────────────┐ │
@@ -239,7 +239,7 @@ UI Update (Real-time)
 
 ### 1. Exploration Engine
 
-The heart of Perpetua - orchestrates the 8-stage cycle.
+The heart of Cognet - orchestrates the 8-stage cycle.
 
 ```typescript
 // src/lib/engine/ExplorationEngine.ts
@@ -666,7 +666,7 @@ import Database from 'better-sqlite3';
 export class DatabaseService {
   private db: Database.Database;
 
-  constructor(dbPath: string = './perpetua.db') {
+  constructor(dbPath: string = './cognet.db') {
     this.db = new Database(dbPath);
     this.initialize();
   }

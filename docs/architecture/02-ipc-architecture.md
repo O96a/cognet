@@ -9,7 +9,7 @@
 
 ## Overview
 
-Inter-Process Communication (IPC) is the bridge between Electron's main process (Node.js) and renderer process (Chromium/React). Perpetua uses a **type-safe, channel-based IPC architecture** with security as the top priority.
+Inter-Process Communication (IPC) is the bridge between Electron's main process (Node.js) and renderer process (Chromium/React). Cognet uses a **type-safe, channel-based IPC architecture** with security as the top priority.
 
 ---
 

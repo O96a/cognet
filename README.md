@@ -1,16 +1,16 @@
-# PERPETUA 🌀
+# COGNET 🌀
 
 **The Infinite Thought Engine**
 
-> "Perpetua never stops. Neither should your curiosity."
+> "Cognet never stops. Neither should your curiosity."
 
-Perpetua is an AI-powered exploration engine that transforms how you research, learn, and create. Give it any question or curiosity, and watch as it autonomously discovers, questions, solves, challenges, searches, imagines, and builds — endlessly.
+Cognet is an AI-powered exploration engine that transforms how you research, learn, and create. Give it any question or curiosity, and watch as it autonomously discovers, questions, solves, challenges, searches, imagines, and builds — endlessly.
 
 Built with Claude's Extended Thinking and Computer Use capabilities.
 
 ---
 
-## ✨ What Makes Perpetua Special
+## ✨ What Makes Cognet Special
 
 **Traditional AI:**
 ```
@@ -19,10 +19,10 @@ AI: [Gives you a summary]
 You: [Still need to do all the work]
 ```
 
-**Perpetua:**
+**Cognet:**
 ```
 You: "Research quantum computing applications in finance"
-Perpetua:
+Cognet:
   → Autonomously explores the topic
   → Finds deeper problems and questions
   → Generates solutions
@@ -106,7 +106,7 @@ Then the cycle repeats, going deeper each time.
 
 ## 🎨 Design
 
-Perpetua follows **Scandinavian design principles**:
+Cognet follows **Scandinavian design principles**:
 - **Minimalism** - Clean, uncluttered interfaces
 - **Functionality** - Every element serves a purpose
 - **Natural Beauty** - Soft colors inspired by Nordic landscapes
@@ -149,9 +149,9 @@ Perpetua follows **Scandinavian design principles**:
 ### For Users
 
 **macOS:**
-1. Download the latest release from [Releases](https://github.com/Clemens865/Perpetua/releases)
-2. Move `Perpetua.app` to your Applications folder
-3. Open Perpetua
+1. Download the latest release from [Releases](https://github.com/Clemens865/Cognet/releases)
+2. Move `Cognet.app` to your Applications folder
+3. Open Cognet
 4. Click Settings (⚙️) and add your [Anthropic API key](https://console.anthropic.com/)
 5. Start a journey and explore!
 
@@ -159,8 +159,8 @@ Perpetua follows **Scandinavian design principles**:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Clemens865/Perpetua.git
-cd Perpetua
+git clone https://github.com/Clemens865/Cognet.git
+cd Cognet
 
 # Install dependencies
 npm install
@@ -243,7 +243,7 @@ See [ROADMAP.md](./ROADMAP.md) for detailed timeline.
 
 ## 🤝 Contributing
 
-Perpetua is currently in early development. We'll open up contributions after the initial launch.
+Cognet is currently in early development. We'll open up contributions after the initial launch.
 
 For now, if you have ideas or feedback:
 - Open an issue
@@ -283,7 +283,7 @@ For now, if you have ideas or feedback:
 
 ## ⭐ Show Your Support
 
-If you're excited about Perpetua, give us a star ⭐️
+If you're excited about Cognet, give us a star ⭐️
 
 It helps us know there's interest and keeps us motivated!
 

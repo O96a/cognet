@@ -2,7 +2,7 @@
 
 ## Overview
 
-Transform Perpetua's journey visualizations from static templates to intelligent, Claude-powered interactive pages that understand content and recommend optimal visualization formats.
+Transform Cognet's journey visualizations from static templates to intelligent, Claude-powered interactive pages that understand content and recommend optimal visualization formats.
 
 ## Current Architecture Analysis
 

@@ -1,4 +1,4 @@
-# Perpetua Frontend Implementation
+# Cognet Frontend Implementation
 
 **Status:** ✅ Complete
 **Date:** October 22, 2025

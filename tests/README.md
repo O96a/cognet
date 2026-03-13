@@ -1,6 +1,6 @@
-# Perpetua Testing Infrastructure
+# Cognet Testing Infrastructure
 
-Comprehensive testing suite for Perpetua - The Infinite Thought Engine.
+Comprehensive testing suite for Cognet - The Infinite Thought Engine.
 
 ## 📋 Overview
 

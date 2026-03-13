@@ -1,11 +1,11 @@
 /**
- * Accessibility utilities for Perpetua design system
+ * Accessibility utilities for Cognet design system
  */
 
 /**
  * Generate unique IDs for form fields and ARIA relationships
  */
-export function generateId(prefix: string = 'perpetua'): string {
+export function generateId(prefix: string = 'cognet'): string {
   return `${prefix}-${Math.random().toString(36).substring(2, 11)}`;
 }
 

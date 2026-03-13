@@ -368,9 +368,9 @@ const cached = await ipcClient.invoke('page:read-analysis', journey.id);
 ### Directory Structure
 
 ```
-~/Library/Application Support/Perpetua/
+~/Library/Application Support/Cognet/
 ├── database/
-│   └── perpetua.db           # SQLite database (metadata)
+│   └── cognet.db           # SQLite database (metadata)
 ├── pages/
 │   └── journey_{id}/
 │       ├── index.html        # Latest generated page

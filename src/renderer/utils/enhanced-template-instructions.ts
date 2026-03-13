@@ -387,8 +387,8 @@ events.forEach((event, i) => {
 - CSS transforms for 60fps animations
 - Debounced scroll listeners
 
-**Perpetua Branding:**
-- Top-left header with "Perpetua" styled to match ${designLanguage.visualStyle.primary}
+**Cognet Branding:**
+- Top-left header with "Cognet" styled to match ${designLanguage.visualStyle.primary}
 - Logo color: ${designLanguage.colorSystem.palette.primary[0]}
 `;
 }
@@ -958,8 +958,8 @@ document.addEventListener('mousemove', (e) => {
 - Debounced listeners
 - Web Workers for physics
 
-**Perpetua Branding:**
-- Top-left header: "Perpetua" styled to match ${designLanguage.visualStyle.primary}
+**Cognet Branding:**
+- Top-left header: "Cognet" styled to match ${designLanguage.visualStyle.primary}
 - Logo color: ${designLanguage.colorSystem.palette.primary[0]}
 `;
 }

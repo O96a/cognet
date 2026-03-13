@@ -507,7 +507,7 @@ Before completing generation, verify ALL of these:
 
 ✅ **Design System**:
 - [ ] Follows the specified design language below
-- [ ] Perpetua branding integrated in top-left
+- [ ] Cognet branding integrated in top-left
 - [ ] Design is unique and visually compelling
 
 **IF ANY CHECKBOX FAILS, FIX IT BEFORE COMPLETION.**
@@ -895,10 +895,10 @@ ${uniqueness.constraints.map(c => `- ${c}`).join('\n')}
 
 ---
 
-## Perpetua Branding
+## Cognet Branding
 
 **Placement**: Top-left header
-**Style Integration**: Style the "Perpetua" logo to match the **${visualStyle.primary}** aesthetic
+**Style Integration**: Style the "Cognet" logo to match the **${visualStyle.primary}** aesthetic
 
 ${getBrandingSuggestions(visualStyle.primary)}
 

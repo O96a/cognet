@@ -67,7 +67,7 @@ export function setupSecurityPolicies(sessionInstance: typeof session): void {
     // Allow local and whitelisted domains
     if (
       url.protocol === 'file:' ||
-      url.protocol === 'perpetua:' ||
+      url.protocol === 'cognet:' ||
       url.protocol === 'devtools:' ||
       url.protocol === 'chrome-devtools:' ||
       allowedDomains.some((domain) => url.hostname.includes(domain))

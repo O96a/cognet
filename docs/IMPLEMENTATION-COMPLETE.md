@@ -17,8 +17,8 @@ Successfully implemented **journey controls** and **enhanced templates** with AI
 
 **Directory Structure:**
 ```
-~/Library/Application Support/Perpetua/
-├── database/perpetua.db
+~/Library/Application Support/Cognet/
+├── database/cognet.db
 ├── pages/
 │   └── journey_{id}/
 │       ├── index.html          # Latest generated page

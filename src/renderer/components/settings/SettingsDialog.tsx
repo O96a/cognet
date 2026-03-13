@@ -161,7 +161,7 @@ export function SettingsDialog({ open: controlledOpen, onOpenChange }: SettingsD
                 </span>
               </div>
               <p className="mb-4 text-xs text-gray-500">
-                Perpetua uses your local{' '}
+                Cognet uses your local{' '}
                 <a href="https://ollama.com" target="_blank" rel="noreferrer" className="underline">
                   Ollama
                 </a>{' '}

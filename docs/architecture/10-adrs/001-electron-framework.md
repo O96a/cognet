@@ -3,13 +3,13 @@
 **Status:** Accepted
 **Date:** 2025-10-22
 **Deciders:** System Architect
-**Context:** Perpetua Architecture Design
+**Context:** Cognet Architecture Design
 
 ---
 
 ## Context and Problem Statement
 
-Perpetua needs a desktop application framework that can deliver a rich, native-feeling experience while maintaining a single codebase and leveraging modern web technologies. The application requires:
+Cognet needs a desktop application framework that can deliver a rich, native-feeling experience while maintaining a single codebase and leveraging modern web technologies. The application requires:
 - Native OS integration
 - File system access
 - Local database (SQLite)

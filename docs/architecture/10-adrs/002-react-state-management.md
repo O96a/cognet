@@ -3,13 +3,13 @@
 **Status:** Accepted
 **Date:** 2025-10-22
 **Deciders:** System Architect
-**Context:** Perpetua Architecture Design
+**Context:** Cognet Architecture Design
 
 ---
 
 ## Context and Problem Statement
 
-Perpetua needs a state management solution that:
+Cognet needs a state management solution that:
 - Handles complex journey state (stages, artifacts)
 - Manages UI state (sidebar, modals, theme)
 - Integrates with IPC communication

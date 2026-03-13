@@ -1,4 +1,4 @@
-# PERPETUA - Design System
+# COGNET - Design System
 
 **Philosophy:** Scandinavian Design Principles
 **Version:** 1.0.0
@@ -737,8 +737,8 @@ const stageIcons = {
 
 **1. Be Clear:**
 ```
-❌ "Perpetua is leveraging cutting-edge AI to facilitate discovery"
-✅ "Perpetua explores ideas for you"
+❌ "Cognet is leveraging cutting-edge AI to facilitate discovery"
+✅ "Cognet explores ideas for you"
 ```
 
 **2. Be Concise:**
@@ -906,4 +906,4 @@ export const designTokens = {
 
 ---
 
-**"Simple, functional, beautiful. That's Perpetua."** 🎨
+**"Simple, functional, beautiful. That's Cognet."** 🎨

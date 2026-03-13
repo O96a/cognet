@@ -29,12 +29,12 @@
 ### User Data Directory (Electron app.getPath('userData'))
 
 ```
-~/Library/Application Support/Perpetua/  (macOS)
-%APPDATA%/Perpetua/                      (Windows)
-~/.config/Perpetua/                      (Linux)
+~/Library/Application Support/Cognet/  (macOS)
+%APPDATA%/Cognet/                      (Windows)
+~/.config/Cognet/                      (Linux)
 
 ├── database/
-│   └── perpetua.db                      [SQLite database]
+│   └── cognet.db                      [SQLite database]
 │
 ├── pages/                               [Generated pages root]
 │   ├── journey_abc123/                  [One folder per journey]

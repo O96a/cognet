@@ -1,6 +1,6 @@
-# 🚀 Getting Started with Perpetua
+# 🚀 Getting Started with Cognet
 
-Welcome to **Perpetua** - The Infinite Thought Engine!
+Welcome to **Cognet** - The Infinite Thought Engine!
 
 This guide will help you navigate the project and understand what we're building.
 
@@ -8,7 +8,7 @@ This guide will help you navigate the project and understand what we're building
 
 ## 🎯 Quick Overview
 
-**What is Perpetua?**
+**What is Cognet?**
 > An AI-powered exploration engine that embodies Anthropic's "Keep X" campaign themes. Give it any question or curiosity, and watch as it autonomously discovers, questions, solves, challenges, searches, imagines, and builds — endlessly.
 
 **Current Status:** Foundation Phase (Week 1)
@@ -20,7 +20,7 @@ This guide will help you navigate the project and understand what we're building
 
 ### 1. Start Here
 **[README.md](./README.md)** - 5 min read
-- What Perpetua is and why it's special
+- What Cognet is and why it's special
 - Core features and capabilities
 - Quick technology overview
 
@@ -167,7 +167,7 @@ We'll open up contributions for:
 
 ### The 8-Stage Cycle
 
-Every Perpetua journey follows this infinite cycle:
+Every Cognet journey follows this infinite cycle:
 
 1. **🔍 DISCOVERING** - Research and explore
 2. **🎯 CHASING** - Find deeper problems
@@ -227,16 +227,16 @@ Then repeat, going deeper each time.
 
 ### What We're Building
 
-Perpetua isn't just another AI tool. It's a **perpetual motion machine for thought** - an exploration engine that never stops discovering, questioning, and creating.
+Cognet isn't just another AI tool. It's a **cognetl motion machine for thought** - an exploration engine that never stops discovering, questioning, and creating.
 
 ### Why It Matters
 
-Traditional AI assistants require constant prompting. You do all the work. Perpetua runs autonomously, exploring ideas deeply while you focus on other things. Come back to dozens of insights and real artifacts.
+Traditional AI assistants require constant prompting. You do all the work. Cognet runs autonomously, exploring ideas deeply while you focus on other things. Come back to dozens of insights and real artifacts.
 
 ### What Success Looks Like
 
 **Users say:**
-> "I gave Perpetua a question before lunch. Came back to a complete research report, 5 solution prototypes, and new questions I never thought to ask."
+> "I gave Cognet a question before lunch. Came back to a complete research report, 5 solution prototypes, and new questions I never thought to ask."
 
 **That's the magic we're building.** ✨
 
@@ -302,7 +302,7 @@ Join us on this journey. Let's build the infinite thought engine together.
 
 ---
 
-**"Perpetua never stops. Neither should your curiosity."** 🌀
+**"Cognet never stops. Neither should your curiosity."** 🌀
 
 ---
 

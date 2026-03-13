@@ -9,7 +9,7 @@
 
 ## Overview
 
-Perpetua uses **Vite** as the build tool for both main and renderer processes. Vite provides:
+Cognet uses **Vite** as the build tool for both main and renderer processes. Vite provides:
 - ⚡ Lightning-fast HMR (Hot Module Replacement)
 - 📦 Optimized production builds with Rollup
 - 🔧 Simple configuration
@@ -201,8 +201,8 @@ export default defineConfig({
 
 ```json
 {
-  "appId": "com.perpetua.app",
-  "productName": "Perpetua",
+  "appId": "com.cognet.app",
+  "productName": "Cognet",
   "directories": {
     "output": "release",
     "buildResources": "build"
@@ -287,7 +287,7 @@ npm run dev
 
 ```env
 # .env
-VITE_APP_NAME=Perpetua
+VITE_APP_NAME=Cognet
 VITE_API_URL=https://api.anthropic.com
 ```
 
@@ -326,7 +326,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Perpetua color system
+        // Cognet color system
         primary: {
           50: '#F0F7FF',
           500: '#2E96FF',
@@ -427,9 +427,9 @@ dist/
     └── index.js (Preload script)
 
 release/
-├── Perpetua-1.0.0.dmg (macOS)
-├── Perpetua Setup 1.0.0.exe (Windows)
-└── Perpetua-1.0.0.AppImage (Linux)
+├── Cognet-1.0.0.dmg (macOS)
+├── Cognet Setup 1.0.0.exe (Windows)
+└── Cognet-1.0.0.AppImage (Linux)
 ```
 
 ---

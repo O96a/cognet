@@ -1,5 +1,5 @@
 /**
- * Core type definitions for Perpetua
+ * Core type definitions for Cognet
  * Based on ARCHITECTURE.md specifications
  */
 

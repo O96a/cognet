@@ -1,4 +1,4 @@
-# Perpetua - Complete Architecture Summary
+# Cognet - Complete Architecture Summary
 
 **Document Type:** Architecture Overview
 **Status:** Approved
@@ -9,7 +9,7 @@
 
 ## Quick Reference
 
-This document provides a high-level overview of Perpetua's complete architecture. For detailed specifications, see the individual architecture documents.
+This document provides a high-level overview of Cognet's complete architecture. For detailed specifications, see the individual architecture documents.
 
 ---
 
@@ -65,7 +65,7 @@ This document provides a high-level overview of Perpetua's complete architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PERPETUA DESKTOP APP                     │
+│                    COGNET DESKTOP APP                     │
 │                                                             │
 │  ┌───────────────────────────────────────────────────────┐ │
 │  │         RENDERER PROCESS (React)                      │ │
@@ -84,7 +84,7 @@ This document provides a high-level overview of Perpetua's complete architecture
 │                            ↕                                │
 │  ┌───────────────────────────────────────────────────────┐ │
 │  │         LOCAL STORAGE                                 │ │
-│  │  • SQLite Database (perpetua.db)                      │ │
+│  │  • SQLite Database (cognet.db)                      │ │
 │  │  • File System (artifacts/)                           │ │
 │  └───────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────┘
@@ -125,7 +125,7 @@ This document provides a high-level overview of Perpetua's complete architecture
 ## Project Structure Summary
 
 ```
-Perpetua/
+Cognet/
 ├── docs/
 │   └── architecture/          # Architecture documentation
 │       ├── 00-architecture-summary.md
@@ -286,9 +286,9 @@ dist/
 └── preload/       # Preload script bundle
 
 release/
-├── Perpetua-1.0.0.dmg         (macOS)
-├── Perpetua Setup 1.0.0.exe   (Windows)
-└── Perpetua-1.0.0.AppImage    (Linux)
+├── Cognet-1.0.0.dmg         (macOS)
+├── Cognet Setup 1.0.0.exe   (Windows)
+└── Cognet-1.0.0.AppImage    (Linux)
 ```
 
 ### Performance Targets
