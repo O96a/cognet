@@ -149,7 +149,7 @@ Cognet follows **Scandinavian design principles**:
 ### For Users
 
 **macOS:**
-1. Download the latest release from [Releases](https://github.com/Clemens865/Cognet/releases)
+1. Download the latest release from [Releases](https://github.com/O96a/cognet/releases)
 2. Move `Cognet.app` to your Applications folder
 3. Open Cognet
 4. Click Settings (⚙️) and add your [Anthropic API key](https://console.anthropic.com/)
@@ -159,8 +159,8 @@ Cognet follows **Scandinavian design principles**:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Clemens865/Cognet.git
-cd Cognet
+git clone https://github.com/O96a/cognet.git
+cd cognet
 
 # Install dependencies
 npm install
@@ -188,7 +188,7 @@ npm run package:mac
 
 **Current Version:** 1.0.0
 **Status:** Active Development
-**Last Updated:** November 19, 2025
+**Last Updated:** March 13, 2026
 
 **Progress:**
 - [x] Concept & Planning
